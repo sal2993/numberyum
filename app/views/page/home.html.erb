@@ -1,3 +1,11 @@
+<script>
+function validateForm() {
+  var x = document.getElementById("work")
+  x.style.display = "inline"; 
+}
+</script>
+
+
 <h1>NumberYum!</h1>
 <p>Yum + Yum = Yum x 2</p>
 
@@ -27,19 +35,19 @@
   <div class='small-2 large-5 columns'><p> </p></div>
 </div>
 
-<div style="display:none;" id='work'>
+<div id='work'>
   <div class='row'> 
-   <div class='small-2 large-4 columns'><p> </p></div> \
-   <div class='small-2 large-4 columns'> \
-     <h2 align='center' id="probset"> 2 x 2 = </h2> \
-   </div> \
-   <div class='small-2 large-4 columns'><p> </p></div> \
- </div> \
+   <div class='small-2 large-4 columns'><p> </p></div>
+   <div class='small-2 large-4 columns'>
+     <h2 align='center' id="probset"> 2 x 2 = </h2>
+   </div>
+   <div class='small-2 large-4 columns'><p> </p></div>
+ </div>
 
  <div class='row'>
    <div class='small-2 large-4 columns'><p> </p> </div>
    <div class='small-2 large-4 columns'> 
-      <form action="">
+      <form name="user_input" onsubmit="return check_answer()" >
        <input name="answer" type="text" />
        <input class='button success' type="submit" value="Submit">
      </form>
@@ -48,12 +56,6 @@
  </div>
 </div>
 
-<script>
-function validateForm() {
-  var x = document.getElementById("work")
-  x.style.display = "inline"; 
-}
-</script>
 
 
 

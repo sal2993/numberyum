@@ -17,3 +17,43 @@
 //= require_tree .
 
 $(function(){ $(document).foundation(); });
+
+var todays_multiplier = (function() {
+  var todays_num = 2;
+  return todays_num;
+})();
+
+var correct_answers_counter = (function() {
+  var counter = 0;
+  return counter;
+})();
+
+var daily_product = [];
+for (var i = 0; i <= 10; i++){
+  daily_product.push(i);
+}
+
+//update_problem();
+
+
+function check_answer() {
+  var user_answer = document.forms["user_input"]["answer"].value;
+  
+  // check for invalid input
+  if (typeof user_answer !== 'number'){
+    alert("Please insert a number!!");
+    return
+  }
+  var the_answer = todays_multiplier() * daily_products[correct_answers_counter()];
+  if ( user_answer === the_answer) {
+    alert("Good Job!");
+    // correct_answers_counter++;
+    //update_problem();
+  }
+}
+
+//function update_problem() {
+//  var correct_answer_tracker = correct_answers_counter;
+//  document.getElementById("probset").innerHTML = todays_multiplier + "x" + 
+//  daily_product[correct_answer_tracker];
+//}
